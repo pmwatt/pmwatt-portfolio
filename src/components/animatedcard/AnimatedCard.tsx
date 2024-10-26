@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { ReactNode, useState, useEffect } from 'react';
 
 // Intersection Observer Hook for scroll animations
 export const useInView = () => {
@@ -88,8 +88,13 @@ export const MouseTrail = () => {
   );
 };
 
+interface AnimatedCardProps {
+  children: ReactNode;
+  className?: string;
+}
+
 // Animated Card Wrapper Component
-export const AnimatedCard = ({ children, className = '' }) => {
+export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className = '' }) => {
   const [setRef, isInView] = useInView();
 
   return (
