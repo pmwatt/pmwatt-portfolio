@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 60% 99%; /* hsl(240, 60%, 99%) */
+    --foreground: 243 76% 5%;  /* hsl(243, 76%, 5%) */
+    --card: 0 0% 100%; /* Assuming card color remains white */
+    --card-foreground: 243 76% 5%; /* Adjusted to your text color */
+    --popover: 240 60% 99%; /* Same as background */
+    --popover-foreground: 243 76% 5%; /* Same as text color */
+
+    --primary: 120 36% 54%; /* hsl(120, 36%, 54%) */
+    --primary-foreground: 240 60% 99%; /* Use background color for foreground */
+
+    --secondary: 120 32% 77%; /* hsl(120, 32%, 77%) */
+    --secondary-foreground: 243 76% 5%; /* Text color for contrast */
+
+    --muted: 120 32% 77%; /* Same as secondary */
+    --muted-foreground: 243 76% 5%; /* Text color */
+
+    --accent: 120 25% 44%; /* hsl(120, 25%, 44%) */
+    --accent-foreground: 240 60% 99%; /* Background color for contrast */
+
+    --destructive: 0 84.2% 60.2%; /* Keeping this unchanged */
+    --destructive-foreground: 243 76% 5%; /* Text color */
+
+    --border: 120 32% 77%; /* Matching secondary */
+    --input: 240 60% 99%; /* Same as background */
+    --ring: 243 76% 5%; /* Use text color */
+
+    --chart-1: 12 76% 61%; /* Keeping charts unchanged */
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 243 76% 5%;  /* hsl(243, 76%, 5%) */
+    --foreground: 240 60% 99%; /* hsl(240, 60%, 99%) */
+
+    --card: 243 76% 5%;  /* Same as dark background */
+    --card-foreground: 240 60% 99%; /* Same as light background */
+
+    --popover: 243 76% 5%;  /* Dark background */
+    --popover-foreground: 240 60% 99%; /* Light foreground */
+
+    /* Adjust primary color for accessibility */
+    --primary: 120 36% 34%; /* Darkened green for better contrast in dark mode */
+    --primary-foreground: 240 60% 99%; /* High contrast foreground */
+
+    --secondary: 120 32% 60%; /* Darkened secondary for better readability */
+    --secondary-foreground: 240 60% 99%; /* High contrast foreground */
+
+    --muted: 120 25% 44%; /* Muted darker accent */
+    --muted-foreground: 240 60% 99%; /* High contrast foreground */
+
+    /* Adjust accent color for readability */
+    --accent: 120 25% 34%; /* Darkened accent for better contrast */
+    --accent-foreground: 240 60% 99%; /* High contrast foreground */
+
+    --destructive: 0 62.8% 30.6%; /* Keeping this unchanged */
+    --destructive-foreground: 240 60% 99%; /* Light foreground */
+
+    --border: 120 25% 44%; /* Darkened accent */
+    --input: 243 76% 5%;  /* Dark background */
+    --ring: 240 60% 99%; /* Light foreground */
+
+    --chart-1: 220 70% 50%; /* Keeping charts unchanged */
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
