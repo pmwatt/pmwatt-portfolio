@@ -14,7 +14,7 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
   plugins: [react()],
-  base: "/book-landing-page/",
+  base: "/pmwatt-portfolio/",
   css: {
     postcss: {
       plugins: [tailwindcss()],
