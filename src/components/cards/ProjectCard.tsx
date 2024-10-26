@@ -4,23 +4,23 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { Trophy } from "lucide-react"
+} from "@/components/ui/tooltip";
+import { Trophy } from "lucide-react";
 
 interface ProjectProps {
-  title: string
-  duration: string
-  description: string
-  achievements?: string[]
-  award?: string
-  technologies?: string[]
+  title: string;
+  duration: string;
+  description: string;
+  achievements?: string[];
+  award?: string;
+  technologies?: string[];
 }
 
 export const ProjectCard = ({
@@ -81,5 +81,5 @@ export const ProjectCard = ({
         )}
       </CardContent>
     </Card>
-  )
-}
+  );
+};

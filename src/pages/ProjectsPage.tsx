@@ -1,7 +1,17 @@
 import { AnimatedCard } from "@/components/animatedcard/AnimatedCard";
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+//   CarouselNext,
+//   CarouselPrevious,
+// } from "@/components/ui/carousel";
 import { ProjectCard } from "@/components/cards/ProjectCard";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+// import carouselFaceauth from "@/assets/facialauth.jpg";
+// import carouselHackathon from "@/assets/hackathon.jpg";
+// import carouselRevif from "@/assets/revif.jpg";
 
 const ProjectsPage = () => {
   const projects = {
@@ -72,11 +82,36 @@ const ProjectsPage = () => {
     ],
   };
 
+  // const carouselImages = [
+  //   { src: carouselRevif, alt: "Revif Art Commission Site" },
+  //   { src: carouselFaceauth, alt: "Facial Authentication Project" },
+  //   { src: carouselHackathon, alt: "Mahidol AI Hackathon" },
+  // ];
+
   return (
     <AnimatedCard>
       <section className="container mx-auto px-4 py-16" id="projects">
         <h2 className="text-3xl font-bold mb-8">Projects</h2>
         <Separator className="mb-8" />
+
+        {/* <Carousel className="py-10">
+          <CarouselContent>
+            {carouselImages.map((image, index) => (
+              <CarouselItem
+                key={index}
+                className="flex justify-center items-center w-52 h-96 overflow-hidden rounded-2xl bg-gray-200 shadow-md"
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="object-cover w-full h-full"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel> */}
 
         <Tabs defaultValue="featured" className="w-full">
           <TabsList className="mb-8">

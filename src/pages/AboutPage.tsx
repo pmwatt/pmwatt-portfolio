@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Mail, Linkedin, MapPin } from "lucide-react";
 import { AnimatedCard } from "@/components/animatedcard/AnimatedCard";
+import pfp from "../assets/pfp.jpeg";
 
 const AboutPage = () => {
   return (
@@ -12,7 +13,7 @@ const AboutPage = () => {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="flex flex-col items-center text-4xl font-bold mb-4">
             <Avatar className="w-44 h-44 mb-12">
-              <AvatarImage src="./assets/pfp.jpeg"></AvatarImage>
+                <AvatarImage src={pfp}/>
               <AvatarFallback>PM</AvatarFallback>
             </Avatar>
             Prachnachai Meakpaiboonwattana
@@ -51,10 +52,6 @@ const AboutPage = () => {
 
         <Card>
           <CardContent className="pt-6 text-center">
-            <h2 className="">
-              Hi! I'm Pao, interested and experienced in Frontend web development. I believe that with my strong foundations in computer science and strong design intuition,
-              I have a
-            </h2>
             <p className="text-center max-w-2xl mx-auto">
               A versatile CS student with strong intuition for design,
               accessibility, and frontend development. With my solid technical
