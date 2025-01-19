@@ -1,61 +1,84 @@
 import { AnimatedCard } from "@/components/animatedcard/AnimatedCard";
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-//   CarouselNext,
-//   CarouselPrevious,
-// } from "@/components/ui/carousel";
 import { ProjectCard } from "@/components/cards/ProjectCard";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-// import carouselFaceauth from "@/assets/facialauth.jpg";
-// import carouselHackathon from "@/assets/hackathon.jpg";
-// import carouselRevif from "@/assets/revif.jpg";
 
 const ProjectsPage = () => {
   const projects = {
-    featured: [
+    ai: [
+      {
+        title:
+          "Senior Project: Empirical Studies on AI GitHub Project Discussions on Hackernews",
+        duration: "August 2024 – Present",
+        description:
+          "A research project to study the spread of AI GitHub projects on hackernews, sentiments regarding AI projects, and the characteristics of AI GitHub projects",
+        achievements: [
+          "Responsible for gathering hackernews story and comment dataset as well as performing topic modelling using LDA in RQ1, and currently investigating causal inference using propensity score matching for the effects of hackernews submission on GitHub project growth in RQ3",
+        ],
+        technologies: [
+          "Python",
+          "GitHub API",
+          "Hackernews API",
+          "LDA Topic Modelling",
+          "Sentiment Analysis",
+          "Propensity Score Matching",
+        ],
+      },
       {
         title: "MUICT 3rd Year Track Recommendation System",
         duration: "Feb 2024 – May 2024",
         description:
-          "A machine learning-based system for recommending academic tracks to ICT students.",
+          "Our team implemented a system for users to input their preferences on subjects, tools, lifestyles, which our system will match their preferred 3rd year track using Random Forest classification algorithm",
         achievements: [
-          "Trained using random forest algorithm achieving 0.81 cross-validation score",
-          "Frontend UI made using Flask, and backend made using FastAPI",
-          "Deployed as dockerfiles for easy deployment and scaling",
+          "Responsible for integrating Flask frontend web page with FastAPI backend serving the model by deploying using Docker, as well as overseeing form data gathering process",
         ],
-        technologies: [
-          "Python",
-          "Flask",
-          "FastAPI",
-          "Docker",
-          "Random Forest",
-          "Machine Learning",
-        ],
+        technologies: ["Python", "Flask", "FastAPI", "Docker", "Scikit-Learn"],
       },
       {
-        title: "Siriraj Chatbot",
+        title: "Facial Authentication System",
+        duration: "Feb 2024 – Apr 2024",
+        description:
+          "Implemented a facial authentication login system using Inception Resnet V1 facial recognition model based on VGGFace2 dataset",
+        achievements: [
+          "The system achieves persistence by storing and retrieving users' facial embeddings via MySQL database for registration and login processes",
+        ],
+        technologies: ["Python", "Flask", "MySQL", "OpenCV"],
+      },
+      {
+        title: "AI for Healthcare Hackathon - Siriraj Chatbot",
         duration: "Mar 2024",
         description:
           "A healthcare chatbot developed for Mahidol AI Hackathon 2024: LLM for Healthcare",
         achievements: [
-          "Obtained 1st Runner-up award",
-          "Implemented chatbot using Google Vertex AI with RAG",
-          "Successfully ingested and processed data from Siriraj Hospital website",
+          "Responsible for the implementation of LangChain for chat functionality message history and FAISS Vector Store for ingesting and retrieving relevant Siriraj website data",
         ],
         award: "1st Runner-up at Mahidol AI Hackathon 2024",
         technologies: [
+          "Google Cloud Platform",
           "Google Vertex AI",
           "RAG",
-          "LLM",
-          "Healthcare",
-          "Chatbot",
+          "LangChain",
+          "FAISS Vector Store",
         ],
       },
     ],
-    web: [
+    se: [
+      {
+        title: "UWU Pet Adoption Mobile App",
+        duration: "Jan 2024 - Mar 2024",
+        description:
+          "Developed a mobile pet adoption app with adoption trainer chatbot for users to ask for guidance on raising their pets",
+        achievements: [
+          "Frontend implemented using Dart/Flutter, as well as Firebase for storing authentication details and user's favourite pets as bookmarks",
+          "Integrated PetFinder API to retrieve external animals and adoption centres data, and Google generative AI for users to request for pet adoption advices",
+        ],
+        technologies: [
+          "Dart/Flutter",
+          "Firebase",
+          "Petfinder API",
+          "Google Generative AI",
+        ],
+      },
       {
         title: "ICT Mahidol Market Festival Site",
         duration: "Jan 2024",
@@ -80,13 +103,30 @@ const ProjectsPage = () => {
         technologies: ["Express", "MySQL", "Frontend", "Backend", "Full-stack"],
       },
     ],
+    misc: [
+      {
+        title: "iPot: An IoT Automated watering system for Indoor Plants",
+        duration: "November 2024 – December 2024",
+        description:
+          "An IoT system using ESP32 arduino alongside nodered for users to set a plant watering schedule via nodered platform, which will also collect environment data including temperature, humidity, and light intensity for analysis",
+        achievements: [
+          "Responsible for designing nodered flows for ingesting time series arduino sensor data into InfluxDB.",
+        ],
+        technologies: ["Arduino", "ESP32", "Node-red", "InfluxDB"],
+      },
+      {
+        title: "Movie Script Search",
+        duration: "October 2023 – December 2023",
+        description:
+          "A movie script full-text search system based on Convokit movie dataset",
+        achievements: [
+          "Utilized Elasticsearch BM25 algorithm supporting full-text search, and preliminary movie script dataset from convokit, which were then cleaned and processed.",
+          "We also used Kibana for monitoring, exploring and visualizing our movie script database.",
+        ],
+        technologies: ["Flask", "Elasticsearch", "Kibana"],
+      },
+    ],
   };
-
-  // const carouselImages = [
-  //   { src: carouselRevif, alt: "Revif Art Commission Site" },
-  //   { src: carouselFaceauth, alt: "Facial Authentication Project" },
-  //   { src: carouselHackathon, alt: "Mahidol AI Hackathon" },
-  // ];
 
   return (
     <AnimatedCard>
@@ -94,39 +134,27 @@ const ProjectsPage = () => {
         <h2 className="text-3xl font-bold mb-8">Projects</h2>
         <Separator className="mb-8" />
 
-        {/* <Carousel className="py-10">
-          <CarouselContent>
-            {carouselImages.map((image, index) => (
-              <CarouselItem
-                key={index}
-                className="flex justify-center items-center w-52 h-96 overflow-hidden rounded-2xl bg-gray-200 shadow-md"
-              >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="object-cover w-full h-full"
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel> */}
-
-        <Tabs defaultValue="featured" className="w-full">
+        <Tabs defaultValue="ai" className="w-full">
           <TabsList className="mb-8">
-            <TabsTrigger value="featured">Featured Projects</TabsTrigger>
-            <TabsTrigger value="web">Web Development</TabsTrigger>
+            <TabsTrigger value="ai">AI/ML</TabsTrigger>
+            <TabsTrigger value="se">Software Development</TabsTrigger>
+            <TabsTrigger value="misc">Miscellaneous</TabsTrigger>
           </TabsList>
 
-          <TabsContent value="featured">
-            {projects.featured.map((project, index) => (
+          <TabsContent value="ai">
+            {projects.ai.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </TabsContent>
 
-          <TabsContent value="web">
-            {projects.web.map((project, index) => (
+          <TabsContent value="se">
+            {projects.se.map((project, index) => (
+              <ProjectCard key={index} {...project} />
+            ))}
+          </TabsContent>
+
+          <TabsContent value="misc">
+            {projects.misc.map((project, index) => (
               <ProjectCard key={index} {...project} />
             ))}
           </TabsContent>

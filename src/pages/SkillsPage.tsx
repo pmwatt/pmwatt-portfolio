@@ -17,21 +17,15 @@ import { AnimatedCard } from "@/components/animatedcard/AnimatedCard";
 
 const SkillsPage = () => {
   const skills = {
-    development: [
-      "JavaScript",
-      "TypeScript",
-      "ReactJS",
-      "NextJS",
-      "TailwindCSS",
-      "ChakraUI",
-      "Shadcn/ui",
-      "ExpressJS",
-      "MySQL",
-      "Firebase",
+    general: [
+      "Python",
+      "Java",
+      "Git",
     ],
-    mobile: ["Dart", "Flutter"],
-    backend: ["Flask", "FastAPI", "Docker", "AWS"],
+    frontend: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "NextJS", "TailwindCSS", "ChakraUI", "Shadcn/ui", "Dart", "Flutter"],
+    backend: ["ExpressJS", "Flask", "FastAPI", "Docker", "AWS"],
     design: [
+      "Figma",
       "Digital Art (Krita, Photoshop, Aseprite)",
       "3D Modelling (Blender)",
     ],
@@ -43,8 +37,20 @@ const SkillsPage = () => {
       description: "AWS Academy Cloud Foundations",
     },
     {
-      title: "Google UX Design",
-      description: "Foundations of UX Design",
+      title: "Foundations of UX Design",
+      description: "Google",
+    },
+    {
+      title: "MathWorks",
+      description: "MATLAB Image Processing Onramp",
+    },
+    {
+      title: "Sololearn",
+      description: "Java",
+    },
+    {
+      title: "Sololearn",
+      description: "C++",
     },
   ];
 
@@ -61,11 +67,11 @@ const SkillsPage = () => {
             </CardHeader>
             <CardContent>
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="development">
-                  <AccordionTrigger>Web Development</AccordionTrigger>
+                <AccordionItem value="General">
+                  <AccordionTrigger>General</AccordionTrigger>
                   <AccordionContent>
                     <div className="flex flex-wrap gap-2">
-                      {skills.development.map((skill) => (
+                      {skills.general.map((skill) => (
                         <Badge key={skill} variant="secondary">
                           {skill}
                         </Badge>
@@ -73,11 +79,11 @@ const SkillsPage = () => {
                     </div>
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="mobile">
-                  <AccordionTrigger>Mobile Development</AccordionTrigger>
+                <AccordionItem value="frontend">
+                  <AccordionTrigger>Frontend Development</AccordionTrigger>
                   <AccordionContent>
                     <div className="flex flex-wrap gap-2">
-                      {skills.mobile.map((skill) => (
+                      {skills.frontend.map((skill) => (
                         <Badge key={skill} variant="secondary">
                           {skill}
                         </Badge>

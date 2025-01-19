@@ -13,7 +13,7 @@ const AboutPage = () => {
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="flex flex-col items-center text-4xl font-bold mb-4">
             <Avatar className="w-44 h-44 mb-12">
-                <AvatarImage src={pfp}/>
+              <AvatarImage src={pfp} />
               <AvatarFallback>PM</AvatarFallback>
             </Avatar>
             Prachnachai Meakpaiboonwattana
@@ -53,11 +53,7 @@ const AboutPage = () => {
         <Card>
           <CardContent className="pt-6 text-center">
             <p className="text-center max-w-2xl mx-auto">
-              A versatile CS student with strong intuition for design,
-              accessibility, and frontend development. With my solid technical
-              and research background, I combine thoughtful design principles
-              with a focus on creating timeless, long-term friendly and
-              accessible web experiences to users.
+              A versatile CS student with a strong foundation in fullstack development and an intuitive sense for design and accessibility.
             </p>
           </CardContent>
         </Card>

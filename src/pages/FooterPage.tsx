@@ -36,7 +36,7 @@ const FooterPage = () => {
             </Button>
           </div>
           <p className="text-sm text-muted-foreground mt-24">
-            ©2024 Prachnachai Meakpaiboonwattana. All rights reserved.
+            ©2025 Prachnachai Meakpaiboonwattana. All rights reserved.
           </p>
         </div>
       </section>
