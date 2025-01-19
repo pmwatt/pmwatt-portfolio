@@ -11,17 +11,17 @@
     --popover: 240 60% 99%; /* Same as background */
     --popover-foreground: 243 76% 5%; /* Same as text color */
 
-    --primary: 120 36% 54%; /* hsl(120, 36%, 54%) */
+    --primary: 120 40% 50%; /* hsl(120, 36%, 54%) */
     --primary-foreground: 240 60% 99%; /* Use background color for foreground */
 
-    --secondary: 120 32% 77%; /* hsl(120, 32%, 77%) */
-    --secondary-foreground: 243 76% 5%; /* Text color for contrast */
+    --secondary: 120 42% 80%; /* hsl(120, 32%, 77%) */
+    --secondary-foreground: 120 50% 25%; /* Text color for contrast */
 
     --muted: 120 32% 77%; /* Same as secondary */
     --muted-foreground: 243 76% 5%; /* Text color */
 
-    --accent: 120 25% 44%; /* hsl(120, 25%, 44%) */
-    --accent-foreground: 240 60% 99%; /* Background color for contrast */
+    --accent: 120 35% 74%; /* hsl(120, 25%, 44%) */
+    --accent-foreground: 120 40% 30%; /* Background color for contrast */
 
     --destructive: 0 84.2% 60.2%; /* Keeping this unchanged */
     --destructive-foreground: 243 76% 5%; /* Text color */
@@ -53,15 +53,15 @@
     --primary: 120 36% 34%; /* Darkened green for better contrast in dark mode */
     --primary-foreground: 240 60% 99%; /* High contrast foreground */
 
-    --secondary: 120 32% 60%; /* Darkened secondary for better readability */
-    --secondary-foreground: 240 60% 99%; /* High contrast foreground */
+    --secondary: 120 20% 40%; /* Darkened secondary for better readability */
+    --secondary-foreground: 120 50% 90%; /* High contrast foreground */
 
-    --muted: 120 25% 44%; /* Muted darker accent */
+    --muted: 120 20% 40%; /* Muted darker accent */
     --muted-foreground: 240 60% 99%; /* High contrast foreground */
 
     /* Adjust accent color for readability */
-    --accent: 120 25% 34%; /* Darkened accent for better contrast */
-    --accent-foreground: 240 60% 99%; /* High contrast foreground */
+    --accent: 120 20% 40%; /* Darkened accent for better contrast */
+    --accent-foreground: 120 40% 80%; /* High contrast foreground */
 
     --destructive: 0 62.8% 30.6%; /* Keeping this unchanged */
     --destructive-foreground: 240 60% 99%; /* Light foreground */
