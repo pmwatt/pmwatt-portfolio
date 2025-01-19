@@ -1,6 +1,6 @@
 {
   "name": "pmwatt.portfolio",
-  "homepage": "https://pmwatt.github.io/{pmwatt-portfolio}/",
+  "homepage": "https://pmwatt.github.io/pmwatt-portfolio/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
